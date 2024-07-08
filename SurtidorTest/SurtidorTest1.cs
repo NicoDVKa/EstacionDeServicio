@@ -1,4 +1,5 @@
-﻿using ModuloSurtidor;
+﻿using ModuloPlayero;
+using ModuloSurtidor;
 
 
 namespace ModuloSurtidorTests
@@ -7,13 +8,18 @@ namespace ModuloSurtidorTests
     {
         Surtidor surtidor;
         double stock;
+        Playero playero;
+        int cantidadSurtidores = 0;
 
         [SetUp]
         public void Setup()
         {
             surtidor = new Surtidor(TipoCombustible.Infinia);
+            playero = new Playero("x", "x", "x", 1, 1);
             stock = 100;
             surtidor.Stock = stock;
+            surtidor.PlayeroAsignado = playero;
+            cantidadSurtidores++;
         }
 
         [TearDown]
@@ -21,6 +27,8 @@ namespace ModuloSurtidorTests
         {
             Console.WriteLine("Test ejecutado. ");
         }
+
+   
 
         [Test]
         public void BajarStockTest()
@@ -48,6 +56,26 @@ namespace ModuloSurtidorTests
 
             //ASSERT
             Assert.That(surtidor.Stock, Is.EqualTo(esperado));
+        }
+
+        [Test]
+        public void CambioPlayeroTest()
+        {
+            //ARRANGE
+            Playero nuevoPlayero = new Playero("x","x","x",1,1);
+
+            //ACT
+            surtidor.CambiarPlayero(nuevoPlayero);
+
+            //ASSERT
+            Assert.That(surtidor.PlayeroAsignado, Is.EqualTo(nuevoPlayero));
+        }
+
+        [Test]
+        public void VerificarCantidadDeSurtidores()
+        {
+            //ASSERT
+            Assert.That(surtidor.Nro, Is.EqualTo(cantidadSurtidores));
         }
 
 

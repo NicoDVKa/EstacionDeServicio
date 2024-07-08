@@ -38,6 +38,17 @@ namespace ModuloPlayero
         {
             return $"{this.Nombre} {this.Apellido}";
         }
-        
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Playero other = (Playero)obj;
+            return Nombre == other.Nombre &&
+                   Apellido == other.Apellido &&
+                   DNI == other.DNI;
+        }
+
     }
 }
