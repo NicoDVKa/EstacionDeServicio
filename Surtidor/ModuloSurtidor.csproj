@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Administracion\ModuloAdministracion.csproj" />
+    <ProjectReference Include="..\Playero\ModuloPlayero.csproj" />
+    <ProjectReference Include="..\Promocion\ModuloPromocion.csproj" />
+  </ItemGroup>
+
 </Project>

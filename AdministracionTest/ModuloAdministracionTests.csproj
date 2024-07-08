@@ -19,6 +19,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Administracion\ModuloAdministracion.csproj" />
+    <ProjectReference Include="..\Playero\ModuloPlayero.csproj" />
+    <ProjectReference Include="..\Promocion\ModuloPromocion.csproj" />
+    <ProjectReference Include="..\Surtidor\ModuloSurtidor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Microsoft.Playwright.NUnit" />
     <Using Include="NUnit.Framework" />
     <Using Include="System.Text.RegularExpressions" />
