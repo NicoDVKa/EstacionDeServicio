@@ -4,7 +4,7 @@ using ModuloSurtidor;
 
 namespace ModuloSurtidorTests
 {
-    internal class SurtidorTest1
+    internal class SurtidorTest
     {
         Surtidor surtidor;
         double stock;
@@ -21,14 +21,6 @@ namespace ModuloSurtidorTests
             surtidor.PlayeroAsignado = playero;
             cantidadSurtidores++;
         }
-
-        [TearDown]
-        public void TearDown()
-        {
-            Console.WriteLine("Test ejecutado. ");
-        }
-
-   
 
         [Test]
         public void BajarStockTest()
@@ -62,7 +54,7 @@ namespace ModuloSurtidorTests
         public void CambioPlayeroTest()
         {
             //ARRANGE
-            Playero nuevoPlayero = new Playero("x","x","x",1,1);
+            Playero nuevoPlayero = new Playero("a","a","a",1,1);
 
             //ACT
             surtidor.CambiarPlayero(nuevoPlayero);
@@ -72,12 +64,53 @@ namespace ModuloSurtidorTests
         }
 
         [Test]
-        public void VerificarCantidadDeSurtidores()
+        public void InicializacionDelNroDeSurtidorTest()
         {
+            //ARRANGE
+            Surtidor nuevoSurtidor = new Surtidor();
+            cantidadSurtidores++;
+
             //ASSERT
-            Assert.That(surtidor.Nro, Is.EqualTo(cantidadSurtidores));
+            Assert.That(nuevoSurtidor.Nro, Is.EqualTo(cantidadSurtidores));
         }
 
+        [Test]
+        public void CambiarEstadoTest()
+        {
+            surtidor.CambiarEstado();
+
+            Assert.IsFalse(surtidor.Estado);
+
+            surtidor.CambiarEstado();
+
+            Assert.IsTrue(surtidor.Estado);
+        }
+
+        [Test]
+        public void CambiarPrecioPorLitro()
+        {
+            //ARRANGE
+            double nuevoPrecio = 10.5;
+            
+            //ACT
+            surtidor.CambiarPrecioPorLitro(nuevoPrecio);
+
+            //ASSERT
+            Assert.That(surtidor.PrecioCombustiblePorLitro, Is.EqualTo(nuevoPrecio));
+        }
+
+        [Test]
+        public void CambiarLitrosParcialesPorVenta()
+        {
+            //ARRANGE
+            double nuevoLitroParcial = 10.5;
+
+            //ACT
+            surtidor.LitrosPorVenta(nuevoLitroParcial);
+
+            //ASSERT
+            Assert.That(surtidor.CantidadLitrosParcialesPorVenta, Is.EqualTo(nuevoLitroParcial));
+        }
 
     }
 }

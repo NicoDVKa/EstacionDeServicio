@@ -11,20 +11,25 @@ namespace ModuloSurtidor
         {
             CantidadSurtidores++;
             this.Nro = CantidadSurtidores;
-           
+   
             this.TipoCombustible = tipo;
+        }
 
+        public Surtidor()
+        {
+            CantidadSurtidores++;
+            this.Nro = CantidadSurtidores;
         }
         
         public uint Nro;
-        public Boolean Estado; 
-        public Playero? PlayeroAsignado; // Crear Clase Playero  <--
-        public TipoCombustible TipoCombustible;
-        public double? PrecioCombustiblePorLitro; 
-        public double? Stock; 
-        public double? CantidadLitrosParcialesPorVenta; 
-        public double? MontoVenta; 
-        public double? CantidadLitrosVendidosEnElDia; 
+        public Boolean Estado = true; 
+        public Playero? PlayeroAsignado;
+        public TipoCombustible TipoCombustible = TipoCombustible.Infinia;
+        public double? PrecioCombustiblePorLitro = 1; 
+        public double? Stock = 0; 
+        public double? CantidadLitrosParcialesPorVenta = 0; 
+        public double? MontoVenta = 0; 
+        public double? CantidadLitrosVendidosEnElDia = 0; 
 
         
         public void CambiarEstado()
