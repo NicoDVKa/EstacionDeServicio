@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Administracion\ModuloAdministracion.csproj" />
+    <ProjectReference Include="..\Menu\Menu.csproj" />
     <ProjectReference Include="..\Playero\ModuloPlayero.csproj" />
     <ProjectReference Include="..\Promocion\ModuloPromocion.csproj" />
     <ProjectReference Include="..\Surtidor\ModuloSurtidor.csproj" />

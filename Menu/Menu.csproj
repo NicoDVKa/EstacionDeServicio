@@ -7,13 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
- 
-    <ProjectReference Include="..\Excepciones\Excepciones.csproj" />
- 
+    <ProjectReference Include="..\Administracion\ModuloAdministracion.csproj" />
     <ProjectReference Include="..\Playero\ModuloPlayero.csproj" />
- 
     <ProjectReference Include="..\Promocion\ModuloPromocion.csproj" />
-
+    <ProjectReference Include="..\Surtidor\ModuloSurtidor.csproj" />
   </ItemGroup>
 
 </Project>

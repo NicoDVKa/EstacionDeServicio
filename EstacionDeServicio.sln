@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstacionDeServicio", "EstacionDeServicio\EstacionDeServicio.csproj", "{DA6F386B-FEF7-4A93-B5A6-323A48CC4F12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstacionDeServicio", "EstacionDeServicio\EstacionDeServicio.csproj", "{DA6F386B-FEF7-4A93-B5A6-323A48CC4F12}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modulo Administracion", "Modulo Administracion", "{05C0A9A1-DFFC-4262-993F-7BB79434F01B}"
 EndProject
@@ -13,21 +13,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modulo Surtidor", "Modulo S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modulo Promocion", "Modulo Promocion", "{86F0E258-1F9B-439D-A9FD-18AC4C29932A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloAdministracion", "Administracion\ModuloAdministracion.csproj", "{ABBF890D-599F-463E-ACAF-579693899AA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuloAdministracion", "Administracion\ModuloAdministracion.csproj", "{ABBF890D-599F-463E-ACAF-579693899AA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloPlayero", "Playero\ModuloPlayero.csproj", "{33F021B1-A5D5-4A05-8BFF-AFB7DBF856EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuloPlayero", "Playero\ModuloPlayero.csproj", "{33F021B1-A5D5-4A05-8BFF-AFB7DBF856EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloPromocion", "Promocion\ModuloPromocion.csproj", "{5E5FFD0A-AC1F-469D-9FF2-4589AF21E821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuloPromocion", "Promocion\ModuloPromocion.csproj", "{5E5FFD0A-AC1F-469D-9FF2-4589AF21E821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloSurtidor", "Surtidor\ModuloSurtidor.csproj", "{20C0FB96-48C7-4252-AF3E-29040DCACEA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuloSurtidor", "Surtidor\ModuloSurtidor.csproj", "{20C0FB96-48C7-4252-AF3E-29040DCACEA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloAdministracionTests", "AdministracionTest\ModuloAdministracionTests.csproj", "{62B33882-6067-44D9-999B-228046A058FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuloAdministracionTests", "AdministracionTest\ModuloAdministracionTests.csproj", "{62B33882-6067-44D9-999B-228046A058FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloPlayeroTests", "PlayeroTest\ModuloPlayeroTests.csproj", "{14ACA80F-78E7-4855-B0C1-6128AF69B7EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuloPlayeroTests", "PlayeroTest\ModuloPlayeroTests.csproj", "{14ACA80F-78E7-4855-B0C1-6128AF69B7EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloPromocionTests", "PromocionTest\ModuloPromocionTests.csproj", "{0CD86A2F-5F52-4AAA-90A1-BB1391C54760}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuloPromocionTests", "PromocionTest\ModuloPromocionTests.csproj", "{0CD86A2F-5F52-4AAA-90A1-BB1391C54760}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloSurtidorTests", "SurtidorTest\ModuloSurtidorTests.csproj", "{556D9E58-7099-432D-800C-42EECA7F5D14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuloSurtidorTests", "SurtidorTest\ModuloSurtidorTests.csproj", "{556D9E58-7099-432D-800C-42EECA7F5D14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{0842D38D-488E-4A5E-A962-4C3F58EB17DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Excepciones", "Excepciones", "{CB0D4147-65D6-4C1F-A282-51946CD06FE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excepciones", "Excepciones\Excepciones.csproj", "{867087F9-9F97-4373-91A3-4AD53CB34459}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Menu", "Menu", "{A380B306-D392-4B0B-9F8C-0187D80E2934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{7417BDAD-49AF-4C0D-972F-5E0957C8CB0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +81,14 @@ Global
 		{556D9E58-7099-432D-800C-42EECA7F5D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{556D9E58-7099-432D-800C-42EECA7F5D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{556D9E58-7099-432D-800C-42EECA7F5D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867087F9-9F97-4373-91A3-4AD53CB34459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867087F9-9F97-4373-91A3-4AD53CB34459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867087F9-9F97-4373-91A3-4AD53CB34459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867087F9-9F97-4373-91A3-4AD53CB34459}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7417BDAD-49AF-4C0D-972F-5E0957C8CB0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7417BDAD-49AF-4C0D-972F-5E0957C8CB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7417BDAD-49AF-4C0D-972F-5E0957C8CB0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7417BDAD-49AF-4C0D-972F-5E0957C8CB0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +102,9 @@ Global
 		{14ACA80F-78E7-4855-B0C1-6128AF69B7EA} = {5D635F70-6DEF-46B6-9C22-05E8245B6FB8}
 		{0CD86A2F-5F52-4AAA-90A1-BB1391C54760} = {86F0E258-1F9B-439D-A9FD-18AC4C29932A}
 		{556D9E58-7099-432D-800C-42EECA7F5D14} = {18D5D81C-5FBF-4F85-915F-B2348BC6EF0F}
+		{CB0D4147-65D6-4C1F-A282-51946CD06FE1} = {0842D38D-488E-4A5E-A962-4C3F58EB17DA}
+		{867087F9-9F97-4373-91A3-4AD53CB34459} = {CB0D4147-65D6-4C1F-A282-51946CD06FE1}
+		{7417BDAD-49AF-4C0D-972F-5E0957C8CB0C} = {A380B306-D392-4B0B-9F8C-0187D80E2934}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {085B659F-1D88-4383-ACD2-AE5528BE7EBB}

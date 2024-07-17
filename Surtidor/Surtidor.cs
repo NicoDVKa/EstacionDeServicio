@@ -7,33 +7,51 @@ namespace ModuloSurtidor
     {
         private static uint CantidadSurtidores = 0;
 
-        public Surtidor(TipoCombustible tipo)
+
+        
+        public Surtidor(TipoCombustible tipo, double cantidadCombustible,  double precioCombustiblePorLitro)
         {
             CantidadSurtidores++;
             this.Nro = CantidadSurtidores;
-           
             this.TipoCombustible = tipo;
+            this.Stock = cantidadCombustible;
+            this.PrecioCombustiblePorLitro = precioCombustiblePorLitro;
 
         }
-        
-        public uint Nro;
-        public Boolean Estado; 
-        public Playero? PlayeroAsignado; // Crear Clase Playero  <--
-        public TipoCombustible TipoCombustible;
-        public double? PrecioCombustiblePorLitro; 
-        public double? Stock; 
-        public double? CantidadLitrosParcialesPorVenta; 
-        public double? MontoVenta; 
-        public double? CantidadLitrosVendidosEnElDia; 
 
-        
+        // Sobrecarga de métodos
+        public Surtidor()
+        {
+            CantidadSurtidores++;
+            this.Nro = CantidadSurtidores;
+        }
+
+
+        public uint Nro;
+        public Boolean Estado = false;
+        public Playero? PlayeroAsignado;
+        public TipoCombustible TipoCombustible = TipoCombustible.Infinia;
+        public double? PrecioCombustiblePorLitro = 1;
+        public double? Stock = 0;
+        public double? CantidadLitrosParcialesPorVenta = 0;
+        public double? MontoTotalVenta = 0;
+        public double? CantidadLitrosVendidosEnElDia = 0;
+
         public void CambiarEstado()
         {
+
             Estado = !Estado;
+            if (Estado == false)
+            {
+                PlayeroAsignado = null;
+            }
+
+
         }
         
-        public void CambiarPlayero(Playero playero)
+        public void AsignarPlayero(Playero playero)
         {
+
             this.PlayeroAsignado = playero;
         }
 
@@ -44,12 +62,13 @@ namespace ModuloSurtidor
 
         public void BajarStock(double litros)
         {
-            this.Stock = this.Stock - litros;
+            if (this.Stock == 0 || this.Stock < litros) throw new StockException("No hay suficiente stock de combustible"); 
+            this.Stock -= litros;
         }
 
         public void SubirStock(double litros)
         {
-            this.Stock = this.Stock + litros;
+            this.Stock += litros;
         }
 
         public void LitrosPorVenta(double litros)
@@ -57,15 +76,27 @@ namespace ModuloSurtidor
             this.CantidadLitrosParcialesPorVenta = litros;
         }
 
-        public void CalcularMonto()
+        public double? CalcularMontoDeVenta(double cantidadLitros)
         {
-            this.MontoVenta = this.PrecioCombustiblePorLitro * CantidadLitrosParcialesPorVenta;
+            
+
+            return cantidadLitros * this.PrecioCombustiblePorLitro;
+
         }
 
         public void CalcularLitrosVendidosEnElDia()
         {
-            this.CantidadLitrosVendidosEnElDia = this.CantidadLitrosVendidosEnElDia + CantidadLitrosParcialesPorVenta;
+            this.CantidadLitrosVendidosEnElDia += CantidadLitrosParcialesPorVenta;
         }
+
+
+
+        public override string ToString()
+        {
+          
+           return $"Surtidor {this.Nro}, Stock: {this.Stock}, Estado: {(this.Estado ? "Habilitado" : "Deshabilitado")}";
+        }
+
     }
-    
+
 }

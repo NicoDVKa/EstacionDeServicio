@@ -8,18 +8,20 @@ namespace ModuloPlayero
         public String Apellido;
         public int HorarioEntrada;
         public int HorarioSalida;
-        public double MontoTotalVentas;
+        public double? MontoTotalVentas;
 
      
         
-        public Playero(String dni, String nombre, String apellido, int horarioEntrada, int cantidadDeHoras = 8)
+        public Playero(String dni, String nombre,   String apellido, int horarioEntrada, int cantidadDeHoras = 8)
         {
             this.DNI = dni;
             this.Nombre = nombre; 
             this.Apellido = apellido;
             this.HorarioEntrada = horarioEntrada;
-            this.HorarioSalida = this.HorarioEntrada + cantidadDeHoras;
+            this.HorarioSalida = horarioEntrada + cantidadDeHoras;
         }
+
+
 
         public void CambiarHorarioEntrada(int nuevoHorario, int cantidadDeHoras = 8)
         {
@@ -28,9 +30,9 @@ namespace ModuloPlayero
         }
 
 
-        public void CalcularMontoTotalVentas(double monto)
+        public void CalcularMontoTotalVentas(double? monto)
         {
-            this.MontoTotalVentas = this.MontoTotalVentas + monto;
+            this.MontoTotalVentas += monto;
         }
 
 

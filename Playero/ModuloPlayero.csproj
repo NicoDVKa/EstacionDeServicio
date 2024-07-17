@@ -6,8 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Administracion\ModuloAdministracion.csproj" />
-  </ItemGroup>
+	<ItemGroup>
 
+	</ItemGroup>
 </Project>
